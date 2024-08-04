@@ -1,43 +1,61 @@
-# Cash Register
+# truefit-cashregister
 
-## The Problem
-Creative Cash Draw Solutions is a client who wants to provide something different for the cashiers who use their system. The function of the application is to tell the cashier how much change is owed, and what denominations should be used. In most cases the app should return the minimum amount of physical change, but the client would like to add a twist. If the "owed" amount is divisible by 3, the app should randomly generate the change denominations (but the math still needs to be right :))
+This template should help get you started developing with Vue 3 in Vite.
 
-Please write a program which accomplishes the clients goals. The program should:
+## Recommended IDE Setup
 
-1. Accept a flat file as input
-	1. Each line will contain the amount owed and the amount paid separated by a comma (for example: 2.13,3.00)
-	2. Expect that there will be multiple lines
-2. Output the change the cashier should return to the customer
-	1. The return string should look like: 1 dollar,2 quarters,1 nickel, etc ...
-	2. Each new line in the input file should be a new line in the output file
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Sample Input
-2.12,3.00
+## Type Support for `.vue` Imports in TS
 
-1.97,2.00
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-3.33,5.00
+## Customize configuration
 
-## Sample Output
-3 quarters,1 dime,3 pennies
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-3 pennies
+## Project Setup
 
-1 dollar,1 quarter,6 nickels,12 pennies
+```sh
+npm install
+```
 
-*Remember the last one is random
+### Compile and Hot-Reload for Development
 
-## The Fine Print
-Please use whatever technology and techniques you feel are applicable to solve the problem. We suggest that you approach this exercise as if this code was part of a larger system. The end result should be representative of your abilities and style.
+```sh
+npm run dev
+```
 
-Please fork this repository. When you have completed your solution, please issue a pull request to notify us that you are ready.
+### Type-Check, Compile and Minify for Production
 
-Have fun.
+```sh
+npm run build
+```
 
-## Things To Consider
-Here are a couple of thoughts about the domain that could influence your response:
+### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
 
-* What might happen if the client needs to change the random divisor?
-* What might happen if the client needs to add another special case (like the random twist)?
-* What might happen if sales closes a new client in France?
+```sh
+npm run test:unit:dev # or `npm run test:unit` for headless testing
+```
+
+### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+
+```sh
+npm run test:e2e:dev
+```
+
+This runs the end-to-end tests against the Vite development server.
+It is much faster than the production build.
+
+But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+
+```sh
+npm run build
+npm run test:e2e
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+npm run lint
+```
