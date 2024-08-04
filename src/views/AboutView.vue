@@ -13,3 +13,4 @@
   }
 }
 </style>
+<!-- For some reason this scaffolded file makes my tsconfig.json throw an error if I try to delete it, so I am leaving it here... -->
